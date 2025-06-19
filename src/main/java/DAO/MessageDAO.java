@@ -33,7 +33,7 @@ public class MessageDAO {
   
         
     } catch (SQLException e) {
-        // TODO: handle exception
+        // TODO: handle exception done
         
         System.out.println(e.getMessage());
         return aList;
