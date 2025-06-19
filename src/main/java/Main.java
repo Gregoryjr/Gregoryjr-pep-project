@@ -1,4 +1,5 @@
 import Controller.SocialMediaController;
+import DAO.AccountDAO;
 import io.javalin.Javalin;
 
 /**
@@ -7,6 +8,9 @@ import io.javalin.Javalin;
  */
 public class Main {
     public static void main(String[] args) {
+        
+        AccountDAO test = new AccountDAO();
+        System.out.println(test.getAllAccounts().get(0).getUsername());
         SocialMediaController controller = new SocialMediaController();
         Javalin app = controller.startAPI();
         app.start(8080);
